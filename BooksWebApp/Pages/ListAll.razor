@@ -1,0 +1,52 @@
+﻿@page "/list_all"
+@using DataLayer.Models;
+@using DataLayer.Services;
+@inject BookService BookService
+
+<PageTitle>List All</PageTitle>
+
+<h3>List All</h3>
+
+@if (books == null)
+{
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Page Count</th>
+                <th>Excerpt</th>
+                <th>Publish Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in books)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Description</td>
+                    <td>@book.PageCount</td>
+                    <td>@book.Excerpt</td>
+                    <td>@book.PublishDate.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<Book>? books;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await BookService.GetAll();
+    }
+}

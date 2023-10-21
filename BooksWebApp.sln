@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksWebApp", "BooksWebApp\BooksWebApp.csproj", "{0ABF1B8B-1EAD-45CF-843F-5858B8E11903}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{C4D9BD9D-AEDC-44DF-BE13-58855E679CF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0ABF1B8B-1EAD-45CF-843F-5858B8E11903}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ABF1B8B-1EAD-45CF-843F-5858B8E11903}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ABF1B8B-1EAD-45CF-843F-5858B8E11903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4D9BD9D-AEDC-44DF-BE13-58855E679CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D9BD9D-AEDC-44DF-BE13-58855E679CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D9BD9D-AEDC-44DF-BE13-58855E679CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D9BD9D-AEDC-44DF-BE13-58855E679CF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

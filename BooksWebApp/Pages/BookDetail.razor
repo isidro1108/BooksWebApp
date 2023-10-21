@@ -1,0 +1,45 @@
+﻿@page "/book_detail"
+@using DataLayer.Models;
+@using DataLayer.Services;
+@inject BookService BookService
+
+<PageTitle>Book Detail</PageTitle>
+
+<form>
+    <h3>Book by ID</h3>
+    <div class="mb-3">
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" readonly>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" class="form-control" readonly>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Page Count</label>
+        <input type="text" class="form-control" readonly>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Excerpt</label>
+        <input type="text" class="form-control" readonly>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Publish Date</label>
+        <input type="text" class="form-control" readonly>
+    </div>
+    
+    <button class="btn btn-primary">Buscar</button>
+</form>
+
+@code {
+    private Book? book;
+
+    async void SearchBook(int id)
+    {
+        book = await BookService.GetById(id);
+    }
+}
